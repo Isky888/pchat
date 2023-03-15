@@ -1,0 +1,110 @@
+.logo-header{
+  background-color: #5E84CE;
+  height: 180px;
+}
+
+.text-logo{
+  color:white;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 64px;
+  position: relative;
+  top: 40px;
+  right: 50px;
+
+}
+
+.form-actions{
+  .btn-main-dark{
+  background-color: #102E4A;
+  color: white;
+  font-family: "Nunito Sans";
+  font-size: 28;
+  font-weight: bold;
+  width: 300px;
+  height: 55px;
+  text-decoration: none;
+  text-align: center;
+  }
+}
+
+
+.header-text{
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  color:white;
+  position: relative;
+  top: 40px;
+  left: 20px;
+}
+
+.heading-text{
+  color: black;
+  font-weight:900;
+  font-size: 24px;
+  font-family: "Nunito Sans";
+}
+
+label{
+  font-family: "nunito sans";
+  font-size: 16px;
+  font-weight: bold;
+}
+.input-design{
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline:none;
+  background-color: transparent;
+  font-weight: bold;
+}
+.btn-main-dark{
+  background-color: #000000;
+  color: white;
+  font-family: $body-font;
+  font-size: 18px;
+}
+
+.container{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.big-header{
+  text-align: center;
+  font-family: $headers-font;
+  font-size: 32px;
+  padding: 20px;
+}
+
+.name-inputs{
+  display:flex;
+}
+
+.link-design{
+  color:black;
+  font-family: $headers-font;
+}
+.link-design:visited,:active{
+  color:black;
+}
+
+.card-select-interest{
+}
+.mobile-data-table{
+  border-radius: 10px;
+}
+.mobile-data-table tr{
+  border-bottom: 0.4px solid white;
+}
+
+.drop-down-box{
+  font-size: 18px;
+  background-color: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline:none;
+  background-color: transparent;
+
+}
