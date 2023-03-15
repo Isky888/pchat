@@ -1,12 +1,28 @@
-.navbar-lewagon {
+.mobile-nav{
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+
+}
+
+.mobile-nav-links-container{
+  display: flex;
   justify-content: space-between;
-  background: white;
-}
+  background:black;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  #navbar-avatar-mobile{
+    border-radius: 50px;
+    width: 38px;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  a {
+    text-decoration: none;
+    font-family: "nunito sans";
+    color:white;
+  }
 }
