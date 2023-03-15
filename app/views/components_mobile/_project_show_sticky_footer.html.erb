@@ -1,0 +1,11 @@
+gc<div class="new-rental-sticky-footer">
+  <div class="link-holder">
+  <%if current_user != @car.owner%>
+    <p id="price-tag">$<%=@car.price%>/dia est.</p>
+    <%= link_to "¡Alquilar!", new_car_rental_path(@car), id: "rent-button"%>
+  <% else %>
+    <%= link_to "Editar", edit_car_path(@car), class: "btn btn-main-dark mt-2", style: "width: 190px" %>
+    <%= link_to "Acceptar", "#", class: "btn btn-main-dark mt-2", style:"width: 190px"%>
+  <% end %>
+  </div>
+</div>
