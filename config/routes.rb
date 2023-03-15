@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "#home"
+  root to: "pages#home"
+  resources :projects do
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
