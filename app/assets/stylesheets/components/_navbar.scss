@@ -2,13 +2,14 @@
   width: 100vw;
   position: sticky;
   top: 0px;
+  z-index: 1;
 
 }
 
 .mobile-nav-links-container{
   display: flex;
   justify-content: space-between;
-  background:black;
+  background:#5E84CE;
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -22,7 +23,7 @@
 
   a {
     text-decoration: none;
-    font-family: "nunito sans";
+    font-family: "Nunito Sans";
     color:white;
   }
 }
