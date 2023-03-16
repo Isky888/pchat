@@ -1,0 +1,33 @@
+.sticky-footer {
+  width: 100vw;
+  position: sticky;
+  bottom: 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 75px;
+  background-color: white;
+
+
+  .link-holder{
+    height: 60px;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-main-dark{
+      margin-top: 15px;
+      background-color: #102E4A;
+      color: white;
+      font-family: "Nunito Sans";
+      font-size: 28;
+      font-weight: bold;
+      width: 300px;
+      height: 55px;
+      text-decoration: none;
+      text-align: center;
+      padding-top: 10px;
+      }
+
+
+  }
+}

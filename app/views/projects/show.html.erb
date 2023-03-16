@@ -47,7 +47,7 @@
       <h3 class="sub-heading-text">Message Board <i class="fa-solid fa-bullhorn"></i></h3>
     </div>
 
-    <div class="card-holder">
+    <div>
       <%@project.posts.each do |post|%>
           <%if current_user == post.user%>
             <%=render "components_mobile/post_card_user", :post => post %>
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="form-actions container d-flex justify-content-center">
+    <div class="form-actions container d-flex justify-content-center mb-4">
       <%= link_to "Post", new_project_post_path(@project), class: "btn-main-dark m-2", style: "width: 300px; height: 55px; padding-top:8px; font-size: 28px;" %>
     </div>
 

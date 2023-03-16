@@ -1,0 +1,9 @@
+<%= render "components_mobile/navbar" %>
+  <div class="card-holder">
+    <%@projects.each do |project|%>
+      <%= link_to project_path(project), style: "text-decoration: none; color: black;" do%>
+        <%=render "components_mobile/project_card", :project => project %>
+      <%end%>
+    <%end%>
+  </div>
+<%= render "components_mobile/sticky_footer" %>
