@@ -3,6 +3,12 @@
   height: 180px;
 }
 
+.top-left{
+  position: absolute;
+  top: 80px;
+  left: 16px;
+}
+
 .text-logo{
   color:white;
   font-family: "Nunito Sans";
@@ -46,8 +52,20 @@
   font-family: "Nunito Sans";
 }
 
+.sub-heading-text{
+  color: black;
+  font-weight:bold;
+  font-size: 20px;
+  font-family: "Nunito Sans";
+}
+
+.heading-holder{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 label{
-  font-family: "nunito sans";
+  font-family: "Nunito sans";
   font-size: 16px;
   font-weight: bold;
 }
@@ -58,12 +76,6 @@ label{
   outline:none;
   background-color: transparent;
   font-weight: bold;
-}
-.btn-main-dark{
-  background-color: #000000;
-  color: white;
-  font-family: $body-font;
-  font-size: 18px;
 }
 
 .container{

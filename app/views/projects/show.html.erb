@@ -1,0 +1,59 @@
+<%= render "components_mobile/navbar" %>
+<div class="show-container" style="overflow: hidden">
+    <div class="container d-flex justify-content-center">
+      <img src="https://www.fintelgaseluce.it/wp-content/uploads/2015/07/FEG-facebook-placeholder_shop.png" style="height: 325px; width: 425px; border-radius: 0px 0px 0px 0px"/>
+    </div>
+
+    <div class="top-left">
+      <%=link_to projects_path, style: "text-decoration: none; color: black;" do%>
+        <i class="fa-solid fa-chevron-left fa-xl"></i>
+      <%end%>
+    </div>
+
+    <div class="heading-holder">
+      <h2 class="heading-text"><%= @project.title%></h2>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div>
+        <div class="container">
+          <h3 class="sub-heading-text"style="margin-left: 15px; margin-bottom: 20px;">Project Lead: <%=@project.user.first_name%> <%=@project.user.last_name%></h3>
+          <div style="display: flex;">
+            <img style="height: 66px; width: 66px; border-radius:50%; margin-right: 10px; margin-top:; margin-left: 15px; border:1px solid white; box-shadow: 0 1px 2px rgba(0,0,0,0.2);" src="https://pcafalcons.com/wp-content/uploads/2019/08/no-profile-picture-icon-female-0-e1564976045606.jpg" alt="">
+            <div>
+              <div style="display: flex; align-items: center; margin-bottom: -5px;">
+                <h3 style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px !important; margin-left: 10px; margin-top:5px"><i class="fa-solid fa-star fa-sm"></i> Status:  </h3>
+              </div>
+              <div style="margin-bottom: -15px;">
+                <p style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px; margin-left: 10px;"><i class="fa-regular fa-calendar"></i> Start: <%= @project.start_date%></p>
+              </div>
+              <div>
+                <p style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px; margin-left: 10px;"><i class="fa-solid fa-calendar"></i> Completion: <%= @project.end_date%></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
+    <div class="heading-holder">
+      <h3 class="sub-heading-text">Message Board <i class="fa-solid fa-bullhorn"></i></h3>
+    </div>
+
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="form-actions container d-flex justify-content-center">
+      <%= link_to "Post", new_project_post_path(@project), class: "btn-main-dark m-2", style: "width: 300px; height: 55px; padding-top:8px; font-size: 28px;" %>
+    </div>
+
+</div>
