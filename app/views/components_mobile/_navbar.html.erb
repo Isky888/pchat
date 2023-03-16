@@ -1,6 +1,10 @@
 <div class="mobile-nav">
   <div class="mobile-nav-links-container">
-    <a href="#" class="navbar-logo"><h3>p.chat<h3></a>
+    <%=link_to projects_path, style: "text-decoration: none;", class:"navbar-logo" do%>
+        <h3>p.chat</h3>
+    <%end%>
+
+    <%= button_to "logout", destroy_user_session_path, method: :delete, class:"navbar-logo"  %>
     <a><img id="navbar-avatar-mobile" src="https://www.walshassociates.co.nz/wp-content/uploads/2015/09/img_placeholder_avatar.jpg" alt="placeholder avatar image."></a>
   </div>
 </div>
