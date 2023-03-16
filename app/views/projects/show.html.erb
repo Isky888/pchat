@@ -46,9 +46,18 @@
     <div class="heading-holder">
       <h3 class="sub-heading-text">Message Board <i class="fa-solid fa-bullhorn"></i></h3>
     </div>
-    <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div class="card-holder">
+      <%@project.posts.each do |post|%>
+          <%if current_user == post.user%>
+            <%=render "components_mobile/post_card_user", :post => post %>
+          <% else %>
+            <%=render "components_mobile/post_card_other", :post => post %>
+          <% end %>
+      <%end%>
+      </div>
     </div>
+
     <div class="form-actions container d-flex justify-content-center">
       <%= link_to "Post", new_project_post_path(@project), class: "btn-main-dark m-2", style: "width: 300px; height: 55px; padding-top:8px; font-size: 28px;" %>
     </div>
