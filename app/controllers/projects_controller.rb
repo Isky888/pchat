@@ -21,9 +21,29 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.status != (params[:status])
+      @post = Post.new
+      @post.user = current_user
+      @post.content = "Project Status Changed!"
+      @post.project = @project
+      @post.save
+    end
+    if @project.update(project_params)
+      redirect_to project_path(@project)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :start_date, :end_date)
+    params.require(:project).permit(:title, :description, :status, :start_date, :end_date)
   end
 end

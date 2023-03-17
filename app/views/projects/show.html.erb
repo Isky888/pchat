@@ -26,7 +26,7 @@
             <img style="height: 66px; width: 66px; border-radius:50%; margin-right: 10px; margin-top:; margin-left: 15px; border:1px solid white; box-shadow: 0 1px 2px rgba(0,0,0,0.2);" src="https://pcafalcons.com/wp-content/uploads/2019/08/no-profile-picture-icon-female-0-e1564976045606.jpg" alt="">
             <div>
               <div style="display: flex; align-items: center; margin-bottom: -5px;">
-                <h3 style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px !important; margin-left: 10px; margin-top:5px"><i class="fa-solid fa-star fa-sm"></i> Status:  </h3>
+                <h3 style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px !important; margin-left: 10px; margin-top:5px"><i class="fa-solid fa-star fa-sm"></i> Status:<%=@project.status%>  </h3>
               </div>
               <div style="margin-bottom: -15px;">
                 <p style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px; margin-left: 10px;"><i class="fa-regular fa-calendar"></i> Start: <%= @project.start_date%></p>
@@ -43,6 +43,15 @@
     <div width="100vw" style="display: flex; justify-content:center">
       <hr style="width: 85vw; background-color:black;">
     </div>
+
+    <div class="container">
+      <p style="font-family: 'Nunito Sans'; font-style: normal; font-size: 15px;"><%=@project.description%></p>
+    </div>
+
+    <div width="100vw" style="display: flex; justify-content:center">
+      <hr style="width: 85vw; background-color:black;">
+    </div>
+
     <div class="heading-holder">
       <h3 class="sub-heading-text">Message Board <i class="fa-solid fa-bullhorn"></i></h3>
     </div>
@@ -58,8 +67,5 @@
       </div>
     </div>
 
-    <div class="form-actions container d-flex justify-content-center mb-4">
-      <%= link_to "Post", new_project_post_path(@project), class: "btn-main-dark m-2", style: "width: 300px; height: 55px; padding-top:8px; font-size: 28px;" %>
-    </div>
-
+    <%= render "components_mobile/sticky_footer_project" %>
 </div>

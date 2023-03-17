@@ -14,11 +14,13 @@
                     autofocus: true,
                     input_html: { autocomplete: "title", class: "input-design"} %>
 
+
         <%= f.input :status,
-                    label:"Status",
+                    label:"Project status",
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "status", class: "input-design"} %>
+
 
         <%=f.label "Start Date"%>
         <%= f.text_field :start_date, data:{ provide:'datepicker' } %>
@@ -30,7 +32,7 @@
 
         <%= f.text_area :description, cols: 30, rows: 5, class: "input-design", style:"margin: 0 auto;" %>
         <div class="form-actions d-flex justify-content-center">
-          <%= f.button :submit, "Create project", class: "btn-main-dark mt-2" %>
+          <%= f.button :submit, "Update project", class: "btn-main-dark mt-2" %>
         </div>
 
       </div>
