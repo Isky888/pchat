@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    if @project.status != (params[:status])
+    if @project.status != params[:project][:status]
       @post = Post.new
       @post.user = current_user
       @post.content = "Project Status Changed!"
