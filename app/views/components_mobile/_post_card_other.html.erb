@@ -3,10 +3,18 @@
     <div style="position: relative; left: 20px; background-color: grey; color:white; width:40px; height:40px; border-radius: 50%; text-align:center;">
       <p style="position: relative; top: 10px;"><%=post.user.first_name.first%><%=post.user.last_name.first%><p>
     </div>
-    <div class = "post_holder" style="background-color: #4cb277; border-radius: 10px; width:250px; padding: 20px; align-text: center">
-      <p style="position: relative; left: 15px; font-weight: bold; font-family: 'Nunito Sans'; color: white; text-decoration: underline; "><%=post.user.first_name%></p>
-      <p style="position: relative; left: 15px; font-family: 'Nunito Sans'; color: white;"><%=post.content%></p>
-      <p style="position: relative; left: 15px;"><%=post.created_at%></p>
-    </div>
+    <%if post.content == "Project Status Changed!"%>
+      <div class = "post_holder" style="background-color: #FFD43B; border-radius: 10px; width:250px; padding: 20px; align-text: center;">
+        <p style="position: relative; left: 15px; font-weight: bold; font-family: 'Nunito Sans'; text-decoration: underline; color: white; "><%=post.user.first_name%></p>
+        <p style="position: relative; left: 15px; font-family: 'Nunito Sans'; color: white;"><%=post.content%></p>
+        <p style="position: relative; left: 15px;"><%=post.created_at%></p>
+      </div>
+    <% else %>
+      <div class = "post_holder" style="background-color: #4cb277; border-radius: 10px; width:250px; padding: 20px; align-text: center">
+        <p style="position: relative; left: 15px; font-weight: bold; font-family: 'Nunito Sans'; color: white; text-decoration: underline; "><%=post.user.first_name%></p>
+        <p style="position: relative; left: 15px; font-family: 'Nunito Sans'; color: white;"><%=post.content%></p>
+        <p style="position: relative; left: 15px;"><%=post.created_at%></p>
+      </div>
+    <% end %>
   </div>
 </div>

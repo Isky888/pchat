@@ -1,0 +1,10 @@
+<div class="sticky-footer">
+  <div class="link-holder d-flex">
+  <%if current_user == @project.user%>
+    <%= link_to "Post", new_project_post_path(@project), class: "btn-main-dark m-1", style: "height: 40px; width: 120px" %>
+    <%= link_to "Update", edit_project_path(@project), class: "btn-main-dark m-1", style: "height: 40px; width: 120px" %>
+  <%else%>
+    <%= link_to "Post", new_project_post_path(@project), class: "btn-main-dark m-1", style: "height: 40px; width: 120px" %>
+  <% end %>
+  </div>
+</div>
